@@ -1,0 +1,90 @@
+.overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(8,12,20,0.7);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+
+.modal {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+}
+
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 20px;
+}
+.headerRight { display: flex; align-items: flex-start; gap: 12px; }
+
+.sym  { font-size: 22px; font-weight: 800; font-family: var(--mono); }
+.name { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.price { font-size: 20px; font-weight: 700; font-family: var(--mono); text-align: right; }
+.chgUp { font-size: 12px; color: var(--green); font-weight: 600; text-align: right; }
+.chgDn { font-size: 12px; color: var(--red);   font-weight: 600; text-align: right; }
+
+.closeBtn {
+  background: var(--bg-3); border: none; border-radius: 8px;
+  color: var(--muted); cursor: pointer; padding: 6px;
+  display: flex; transition: var(--transition);
+}
+.closeBtn:hover { background: var(--bg-4); color: var(--text); }
+
+/* Tabs */
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+
+.tab {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px; border-radius: 10px; font-weight: 700; font-size: 14px;
+  cursor: pointer; border: 1px solid var(--border);
+  background: var(--bg-2); color: var(--text2);
+  font-family: var(--font); transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+.tabBuy  { background: rgba(0,212,170,0.12); color: var(--green); border-color: rgba(0,212,170,0.3); }
+.tabSell { background: rgba(255,71,87,0.12); color: var(--red);   border-color: rgba(255,71,87,0.25); }
+
+/* Form */
+.form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+
+.field {}
+.label {
+  display: block; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.8px; color: var(--muted); font-weight: 600; margin-bottom: 6px;
+}
+
+.qtyRow { display: flex; gap: 8px; }
+.qtyBtn {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: var(--bg-3); border: 1px solid var(--border);
+  border-radius: 10px; color: var(--text); cursor: pointer;
+  font-size: 18px; font-family: var(--font);
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.qtyBtn:hover { background: var(--bg-4); }
+
+/* Summary */
+.summary {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 16px;
+}
+
+.summaryRow {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: var(--text2);
+}
+
+.totalVal {
+  font-family: var(--mono); font-weight: 700;
+  font-size: 15px; color: var(--text);
+}
